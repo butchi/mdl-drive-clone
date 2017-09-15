@@ -1,6 +1,8 @@
 mdl-drive-clone
 ====
 
+demo: https://butchi.github.io/mdl-drive-clone/
+
 ## はじめに
 本スターターキットは kayac-html5-starter から派生しています。
 
