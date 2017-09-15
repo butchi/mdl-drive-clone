@@ -4,10 +4,13 @@ append config-block
   - pageId = 'index'
 
 block content-block
-  header
-    h1
-      | Index Page
+  .layout.mdl-layout.mdl-js-layout.mdl-layout--fixed-header(data-name="whole")
+    header.header.mdl-layout__header
+      include /_partial/header
 
-  main
-    p
-      | content
+    main.content.mdl-layout__content
+      .column(data-name="menu")
+        include /_partial/main/menu
+
+      .column(data-name="files")
+        include /_partial/main/files

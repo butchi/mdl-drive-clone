@@ -1,0 +1,40 @@
+.section(data-name="quick-access")
+  h3.heading
+    | クイックアクセス
+
+  mixin card-quick-access(opts = {})
+    -
+      const { filename, description = '最近閲覧したファイル' } = opts;
+    .card-quick-access
+      .card.mdl-card.mdl-shadow--2dp
+        .title.mdl-card__title.mdl-card--expand(style="background-image: url(//placehold.jp/256x128.png);")
+          //- h4.title-text.mdl-card__title-text README.md
+        .supporting-text.mdl-card__supporting-text
+          h4.filename
+            = filename
+          .description
+            = description
+        .menu.mdl-card__menu
+          button.button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab
+            i.material-icons insert_drive_file
+
+  .list
+    .item
+      +card-quick-access({
+        filename: 'README.md',
+      })
+
+    .item
+      +card-quick-access({
+        filename: 'index.html',
+      })
+
+    .item
+      +card-quick-access({
+        filename: 'style.css',
+      })
+
+    .item
+      +card-quick-access({
+        filename: 'script.js',
+      })

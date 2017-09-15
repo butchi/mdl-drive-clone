@@ -1,0 +1,105 @@
+.header-row.mdl-layout__header-row
+  // Title
+  span.mdl-layout-title ドライブ
+
+  mixin textfield(opts = {})
+    -
+      const { idFor, name } = opts;
+
+    .textfield.mdl-textfield.mdl-js-textfield
+      label.label.mdl-textfield__label(for=idFor)
+        i.material-icons search
+        | ドライブを検索
+      input.input.mdl-textfield__input(id= idFor, type="text", name= name)
+
+
+  +textfield({
+    idFor: 'fixed-header-drawer-exp',
+    name: 'my-drive',
+  })
+
+  // Add spacer, to align navigation to the right
+  .mdl-layout-spacer
+
+  // Navigation. We hide it in small screens.
+  nav.navigation.mdl-navigation.mdl-layout
+    a.link.mdl-navigation__link
+      button.button.mdl-button.mdl-js-button.mdl-button--icon
+        i.material-icons view_module
+    a.link.mdl-navigation__link
+      button.button.mdl-button.mdl-js-button.mdl-button--icon
+        i.material-icons add_alert
+    a.account.link.mdl-navigation__link
+      button.button.mdl-button.mdl-js-button.mdl-button--icon
+        i.material-icons person
+
+.header-row.mdl-layout__header-row
+  .file-menu
+    mixin button(opts = {})
+      -
+        const { idFor, menuArr } = opts;
+
+      button.button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored(id= idFor,type="button")
+        | 新規
+      if menuArr
+        ul.menu.mdl-menu.mdl-menu--bottom-left.mdl-js-menu.mdl-js-ripple-effect(for= idFor)
+          each item in menuArr
+            -
+              const { label } = item;
+            li.item.mdl-menu__item= label
+
+    +button({
+      idFor: 'button-file-menu',
+      menuArr: [
+        {
+          label: 'フォルダ',
+        },
+        {
+          label: 'ファイルのアップロード',
+        },
+        {
+          label: 'フォルダのアップロード',
+        }
+      ]
+    })
+
+  .file-action
+    mixin chip(opts = {})
+      -
+        const { idFor, menuArr } = opts;
+
+      button.chip.mdl-chip(id= idFor,type="button")
+        span.text.mdl-chip__text
+          | マイドライブ
+        i.material-icons arrow_drop_down
+      if menuArr
+        ul.menu.mdl-menu.mdl-menu--bottom-left.mdl-js-menu.mdl-js-ripple-effect(for= idFor)
+          each item in menuArr
+            -
+              const { label } = item;
+            li.item.mdl-menu__item= label
+
+    +chip({
+      idFor: 'chip-file-action',
+      menuArr: [
+        {
+          label: '新しいフォルダ',
+        },
+        {
+          label: 'ファイルをアップロード',
+        },
+        {
+          label: 'フォルダをアップロード',
+        }
+      ]
+    })
+
+  .mdl-layout-spacer
+
+  .control-panel
+    button.button.mdl-button.mdl-js-button.mdl-button--icon
+      i.material-icons list
+    button.button.mdl-button.mdl-js-button.mdl-button--icon
+      i.material-icons info
+    button.button.mdl-button.mdl-js-button.mdl-button--icon
+      i.material-icons settings

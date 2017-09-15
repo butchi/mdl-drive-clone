@@ -1,0 +1,43 @@
+ul.list.mdl-list
+  mixin item(opts = {})
+    -
+      const { icon, label } = opts;
+    li.item.mdl-list__item
+      span.item-primary-content.mdl-list__item-primary-content
+        i.material-icons.mdl-list__item-icon= icon
+        = label
+
+  +item({
+    icon: 'developer_board',
+    label: 'マイドライブ',
+  })
+
+  +item({
+    icon: 'phonelink',
+    label: 'パソコン',
+  })
+
+  +item({
+    icon: 'group',
+    label: '共有アイテム',
+  })
+
+  +item({
+    icon: 'access_time',
+    label: '最近使用したアイテム',
+  })
+
+  +item({
+    icon: 'photo',
+    label: 'フォト',
+  })
+
+  +item({
+    icon: 'star',
+    label: 'スター付き',
+  })
+
+  +item({
+    icon: 'delete',
+    label: 'ゴミ箱',
+  })

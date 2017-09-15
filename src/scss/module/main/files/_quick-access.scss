@@ -1,0 +1,79 @@
+.section[data-name="quick-access"] {
+  padding: 20px 0 8px;
+  padding-right: 64px;
+
+  .card-quick-access {
+    .card {
+      margin: 7px;
+
+      width: auto;
+
+      .title {
+        padding: 0;
+
+        height: 94px;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        // .title-text {
+        //   font-size: 12px;
+        //   font-weight: bold;
+        // }
+      }
+
+      .supporting-text {
+        padding: 20px;
+        padding-left: 16px;
+        padding-right: 12px;
+
+        width: 100%;
+
+        font-size: $base-font-size;
+      }
+
+      .menu {
+        top: 78px;
+
+        .button {
+          min-width: 30px;
+          width: 30px;
+          height: 30px;
+
+          background-color: white;
+          color: $blue;
+
+          .material-icons {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .filename {
+      font-weight: bold;
+
+      color: black;
+    }
+
+    .description {
+      color: rgba(0,0,0,.54);
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: -5px;
+    overflow: hidden;
+  }
+
+  .item {
+    flex: 1 1 226px;
+    min-width: 226px;
+    // max-width: 300px;
+    max-width: 226px;
+  }
+}

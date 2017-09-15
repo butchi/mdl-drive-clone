@@ -1,0 +1,89 @@
+.header {
+  position: relative;
+
+  background-color: white;
+  color: black;
+
+  .textfield {
+    margin-left: 40px;
+
+    width: calc(100% - 300px);
+
+    .label {
+      text-indent: 10px;
+
+      .material-icons {
+        margin-right: 20px;
+
+        color: #333;
+
+        transform: translateY(5px)
+      }
+    }
+
+    .input {
+      height: 50px;
+
+      border-radius: 4px;
+
+      background-color: #eee;
+    }
+  }
+
+  .navigation {
+    width: auto;
+
+    .link {
+      padding: 10px;
+
+      line-height: 20px;
+    }
+
+    .account {
+      border-radius: 100%;
+
+      background-color: maroon;
+      color: red;
+    }
+  }
+
+  .header-row {
+    padding: 0 20px;
+  }
+
+  .file-menu {
+    .button {
+      width: 100px;
+
+      background-color: $blue;
+    }
+  }
+
+  .file-action {
+    margin-left: 100px;
+
+    .chip {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+
+      .text {
+        font-size: 20px;
+      }
+
+      .material-icons {
+        transform: translateY(10px);
+      }
+    }
+  }
+
+  .control-panel {
+    color: #666;
+
+    .button {
+      + .button {
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+[data-page-id="index"] {
+  .layout[data-name="whole"] {
+    @import "../module/header";
+  }
+
+  .navigation {
+    // justify-content: flex-end;
+
+    .link {
+      // display: inline-block;
+
+      color: gray;
+    }
+  }
+
+  .content {
+    background-color: #e9e9e9;
+  }
+
+  .grid {
+    padding: 0;
+
+    height: 100%;
+  }
+
+  .column {
+    margin: 0;
+    padding: 0;
+
+    @import "../module/main/menu";
+
+    &[data-name="files"] {
+      float: left;
+
+      width: calc(100% - 256px;);
+
+      .heading {
+        color: rgba(0,0,0,.54);
+        font-weight: 500;
+        margin-left: 22px;
+        padding: 8px 0 16px;
+      }
+
+      @import "../module/main/files/quick-access";
+    }
+  }
+
+  .drawer {
+  }
+}
