@@ -1,0 +1,48 @@
+[data-page-id="index"] {
+  .card-fv {
+    .card {
+      width: 480px;
+
+      .title {
+        height: 270px;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .title-text {
+          align-self: flex-start;
+        }
+      }
+
+
+      .supporting-text {
+        font-size: 15px;
+      }
+
+      .actions {
+        position: relative;
+
+        background-color: blue;
+
+        .btn-start {
+          .button {
+            background-color: yellow;
+          }
+        }
+
+        .btn-contact {
+          .button {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+
+}

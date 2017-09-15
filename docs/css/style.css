@@ -107,3 +107,27 @@ html.is-pc .wrapper {
   min-width: 1200px;
   min-width: 12rem;
   overflow: hidden; }
+
+[data-page-id="index"] .card-fv .card {
+  width: 480px; }
+  [data-page-id="index"] .card-fv .card .title {
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    [data-page-id="index"] .card-fv .card .title .title-text {
+      -webkit-align-self: flex-start;
+          -ms-flex-item-align: start;
+              align-self: flex-start; }
+  [data-page-id="index"] .card-fv .card .supporting-text {
+    font-size: 15px; }
+  [data-page-id="index"] .card-fv .card .actions {
+    position: relative;
+    background-color: blue; }
+    [data-page-id="index"] .card-fv .card .actions .btn-start .button {
+      background-color: yellow; }
+    [data-page-id="index"] .card-fv .card .actions .btn-contact .button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: white; }
