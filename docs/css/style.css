@@ -204,14 +204,16 @@ html.is-pc .wrapper {
   [data-page-id="index"] .column[data-name="menu"] {
     float: left;
     width: 256px; }
-    [data-page-id="index"] .column[data-name="menu"] .list .item {
-      padding: 0;
-      padding-left: 20px;
-      min-height: 40px; }
-      [data-page-id="index"] .column[data-name="menu"] .list .item .item-primary-content {
-        text-indent: 10px;
-        font-size: 13px;
-        color: gray; }
+    [data-page-id="index"] .column[data-name="menu"] .list {
+      padding: 20px 0; }
+      [data-page-id="index"] .column[data-name="menu"] .list .item {
+        padding: 0;
+        padding-left: 20px;
+        min-height: 40px; }
+        [data-page-id="index"] .column[data-name="menu"] .list .item .item-primary-content {
+          text-indent: 10px;
+          font-size: 13px;
+          color: gray; }
   [data-page-id="index"] .column[data-name="files"] {
     float: left;
     width: calc(100% - 256px); }
